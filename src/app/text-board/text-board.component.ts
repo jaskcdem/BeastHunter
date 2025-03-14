@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
+import { BackhomeComponent } from '../backhome/backhome.component';
 
 @Component({
   selector: 'app-text-board',
-  imports: [RouterOutlet, FormsModule, DatePipe],
+  imports: [RouterOutlet, BackhomeComponent, FormsModule, DatePipe],
   templateUrl: './text-board.component.html',
   styleUrl: './text-board.component.css'
 })
@@ -16,7 +17,7 @@ export class TextBoardComponent {
   messages: Message[] = [];
   addMessage(): void {
     // 防呆，避免名稱或內容是空值時也可以留言
-    if (!this.name.trim() ||!this.desc.trim()) {
+    if (!this.name.trim() || !this.desc.trim()) {
       return;
     }
 

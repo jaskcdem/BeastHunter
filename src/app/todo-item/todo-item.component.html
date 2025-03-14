@@ -1,0 +1,18 @@
+<li [class.completed]="todo.completed" [class.editing]="editing">
+  <div class="view">
+    <input class="toggle" type="checkbox" (click)="onToggle()" [checked]="todo.completed" />
+    <label (dblclick)="onEdit()">{{ todo.title }}</label>
+    <button class="destroy" (click)="onRemove()">
+      <img src="/x-square.svg" alt="remove">
+    </button>
+  </div>
+  @if (editing) {
+  <div class="input-container">
+    <input #todoInputRef class="edit" id="edit-todo-input" placeholder="click me to edit" [(ngModel)]="title"
+      (focus)="handleFocus($event)" (blur)="handleBlur($event)" (keyup.enter)="onSave()" />
+    <label class="visually-hidden" htmlFor="edit-todo-input">
+      <i>Enter to save after edit</i>
+    </label>
+  </div>
+  }
+</li>

@@ -1,0 +1,19 @@
+<app-backhome></app-backhome>
+<div class="main">
+  <div class="content"><app-todo-header></app-todo-header></div><br>
+  @if (todos.length > 0) {
+  <div class="toggle-all-container">
+    <label class="toggle-all-label">
+      <input class="toggle-all" type="checkbox" (change)="toggleAll($event)" (click)="toggleAll($event)"
+        [checked]="!activeTodos.length" />
+      Check All</label>
+  </div>
+  <ul class="todo-list">
+    @for (todo of todos; track todo) {
+    <app-todo-item [todo]="todo" (remove)="onRemove($event)" />
+    }
+  </ul>
+  }
+  <div class="content"><app-todo-footer></app-todo-footer></div>
+</div>
+<router-outlet></router-outlet>

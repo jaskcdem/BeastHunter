@@ -9,6 +9,11 @@ main {
   position: relative;
 }
 
+img {
+  width: 16px;
+  height: 16px;
+}
+
 .pill-group {
   display: flex;
   flex-direction: column;
@@ -44,15 +49,19 @@ main {
 .pill-group .pill:nth-child(6n + 1) {
   --pill-accent: var(--bright-blue);
 }
+
 .pill-group .pill:nth-child(6n + 2) {
   --pill-accent: var(--french-violet);
 }
-.pill-group .pill:nth-child(6n + 3){
+
+.pill-group .pill:nth-child(6n + 3) {
   --pill-accent: var(--vivid-pink);
 }
+
 .pill-group .pill:nth-child(6n + 4) {
   --pill-accent: var(--electric-violet);
 }
+
 .pill-group .pill:nth-child(6n + 5) {
   --pill-accent: var(--hot-red);
 }
@@ -61,23 +70,25 @@ main {
   margin-inline-start: 0.25rem;
 }
 
-table, th, td{
+table,
+th,
+td {
   border: 1px solid;
   border-collapse: collapse;
 }
 
-.tb1{
+.tb1 {
   background-color: white;
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
 }
 
-.tb1 tr th{
+.tb1 tr th {
   background-color: silver;
 }
 
-.tb1 tr:hover{
+.tb1 tr:hover {
   background-color: yellow;
 }
 
@@ -89,7 +100,7 @@ table, th, td{
   width: 50%;
 }
 
-.w75{
+.w75 {
   width: 75%;
 }
 
