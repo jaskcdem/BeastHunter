@@ -1,24 +1,26 @@
-<div class="content">
-  <a href="/" target="_self">home</a>
+<div class="content pill-group">
+  <a class="pill" href="/" target="_self">home</a>
 </div>
-<form (ngSubmit)="addMessage()">
-  <div class="content">
-    <div class="w25" style="display: inline;">名稱</div>
-    <div class="w75">
-      <input type="text" name="name" [(ngModel)]="name" />
+<main>
+  <form (ngSubmit)="addMessage()">
+    <div class="content">
+      <div class="w25" style="display: inline;">名稱</div>
+      <div class="w75">
+        <input type="text" name="name" [(ngModel)]="name" />
+      </div>
+      <div class="w25" style="display: inline;">內容</div>
+      <div class="w75">
+        <input type="text" name="desc" [(ngModel)]="desc" />
+      </div>
     </div>
-    <div class="w25" style="display: inline;">內容</div>
-    <div class="w75">
-      <input type="text" name="desc" [(ngModel)]="desc" />
+    <div class="content">
+      <button type="submit">新增留言</button>
     </div>
-  </div>
-  <div class="content">
-    <button type="submit">新增留言</button>
-  </div>
-</form>
-@for (item of messages; track $index) {
+  </form>
+  @for (item of messages; track $index) {
   <div class="content">
     {{ item.name }} 說：{{ item.desc }} -- ({{ item.date | date: 'yyyy-MM-dd HH:mm:ss' }})
   </div>
-}
+  }
+</main>
 <router-outlet />

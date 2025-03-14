@@ -1,0 +1,35 @@
+<div class="content pill-group">
+  <a class="pill" href="/" target="_self">home</a>
+</div>
+<main>
+  <div class="content">
+    <table class="tb1">
+      <thead>
+        <tr>
+          <th></th>
+          <th>人物</th>
+          <th>職業</th>
+          <th>屬性</th>
+          <th>武器</th>
+          <th>魔法</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 這裡的 track item.Char 是為了讓 Angular 能夠追蹤 item.Char 的變化，以便更新 DOM -->
+        @for(item of list; track item.Char; let i = $index; let e = $even;) {
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.Char }}</td>
+          <td>{{ item.Job }}</td>
+          <td>{{ item.Elem }}</td>
+          <td>{{ item.Weap }}</td>
+          <td>{{ item.Magic }}</td>
+          <td>{{ item.Time | date: 'yyyy/MM/dd HH:mm:ss' }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</main>
+<router-outlet />

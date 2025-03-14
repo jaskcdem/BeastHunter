@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { TextBoardComponent } from './text-board/text-board.component';
+import { TableComponent } from './table/table.component';
 
 export const routes: Routes = [
   {
@@ -8,7 +9,16 @@ export const routes: Routes = [
     component: TextBoardComponent
   },
   {
+    path: 'table',
+    component: TableComponent
+  },
+  {
     path: '',
-    component: AppComponent
+    component: HomeComponent
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
