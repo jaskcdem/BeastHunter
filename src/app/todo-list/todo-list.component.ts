@@ -14,9 +14,6 @@ import { BackhomeComponent } from '../backhome/backhome.component';
   styleUrl: './todo-list.component.css',
 })
 export class TodoListComponent {
-  constructor() {
-    this.todos;
-  }
   private location = inject(Location);
   private todoService = inject(TodoService);
 

@@ -1,7 +1,8 @@
 <li [class.completed]="todo.completed" [class.editing]="editing">
   <div class="view">
-    <input class="toggle" type="checkbox" (click)="onToggle()" [checked]="todo.completed" />
-    <label (dblclick)="onEdit()">{{ todo.title }}</label>
+    <label (dblclick)="onEdit()">
+      <input class="toggle" type="checkbox" (click)="onToggle()" [checked]="todo.completed" />
+      {{ todo.title }}</label>&nbsp;
     <button class="destroy" (click)="onRemove()">
       <img src="/x-square.svg" alt="remove">
     </button>

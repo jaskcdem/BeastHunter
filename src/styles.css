@@ -1,9 +1,9 @@
-main {
+main,
+.main {
   width: 98%;
   min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
   padding: 1rem;
   box-sizing: inherit;
   position: relative;

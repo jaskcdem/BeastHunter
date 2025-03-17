@@ -4,17 +4,17 @@
     <strong>{{ todosUndone.length }}</strong>
     {{ todosUndone.length === 1 ? "item" : "items" }} need to be done
   </span>
-  <!-- <ul class="filters">
+  <ul class="filters">
     <li>
-      <a href="/todo" [class.selected]="filter === 'all'">All</a>
+      <a (click)="todos" [class.selected]="filter === 'all'">All</a>
     </li>
     <li>
-      <a href="/todo/active" [class.selected]="filter === 'active'">Active</a>
+      <a (click)="todosUndone" [class.selected]="filter === 'active'">Active</a>
     </li>
     <li>
-      <a href="/todo/completed" [class.selected]="filter === 'completed'">Completed</a>
+      <a (click)="todosDone" [class.selected]="filter === 'completed'">Completed</a>
     </li>
-  </ul> -->
+  </ul>
   @if (todosDone.length > 0) {
   <button type="button" class="clear-completed" (click)="clearCompleted()">
     Clear Completed

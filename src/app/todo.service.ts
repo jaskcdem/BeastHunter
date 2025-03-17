@@ -8,6 +8,19 @@ export interface Todo {
   providedIn: 'root'
 })
 export class TodoService {
+  private static instance: TodoService;
+
+  private constructor() {
+    this.todos = [];
+  }
+
+  static getInstance(): TodoService {
+    if (!TodoService.instance) {
+      TodoService.instance = new TodoService();
+    }
+    return TodoService.instance;
+  }
+
   todos: Todo[] = [];
 
   addItem(title: string): void {
