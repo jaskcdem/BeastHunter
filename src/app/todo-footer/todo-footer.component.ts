@@ -13,9 +13,6 @@ export class TodoFooterComponent {
   get todos() {
     return this.todoService.getItems();
   }
-  get todosCount() {
-    return this.todos.length;
-  }
   get todosDone() {
     return this.todoService.getItems('completed');
   }
@@ -27,5 +24,8 @@ export class TodoFooterComponent {
   }
   clearCompleted() {
     this.todoService.clearCompleted();
+  }
+  setFilter(filter: string): void {
+    this.location.go(`/todo/${filter}`);
   }
 }

@@ -6,13 +6,13 @@
   </span>
   <ul class="filters">
     <li>
-      <a (click)="todos" [class.selected]="filter === 'all'">All</a>
+      <label (dblclick)="setFilter('all')" [class.selected]="filter === 'all'">All</label>
     </li>
     <li>
-      <a (click)="todosUndone" [class.selected]="filter === 'active'">Active</a>
+      <label (dblclick)="setFilter('active')" [class.selected]="filter === 'active'">Active</label>
     </li>
     <li>
-      <a (click)="todosDone" [class.selected]="filter === 'completed'">Completed</a>
+      <label (dblclick)="setFilter('completed')" [class.selected]="filter === 'completed'">Completed</label>
     </li>
   </ul>
   @if (todosDone.length > 0) {

@@ -33,6 +33,13 @@ export const routes: Routes = [
         }
       },
       {
+        path: 'all',
+        component: TodoListComponent,
+        resolve: {
+          todos: () => inject(TodoService).getItems('all')
+        }
+      },
+      {
         path: '',
         component: TodoListComponent
       }
@@ -42,9 +49,9 @@ export const routes: Routes = [
     path: '',
     component: HomeComponent
   },
-  /*{
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full'
-  }*/
+  }
 ];

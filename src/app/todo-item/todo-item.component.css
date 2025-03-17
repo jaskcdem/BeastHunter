@@ -31,3 +31,7 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
+:focus {
+  border: 1px solid #f645a0;
+}
