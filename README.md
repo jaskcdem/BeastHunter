@@ -1,6 +1,32 @@
-# BeastHunter
+# <center>BeastHunter</center>
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+
+## Requirements
+
+1. Install the NVM(Node Version Manager)
+   1. [NVM for Windows](https://github.com/coreybutler/nvm-windows)  
+      a. Download version 1.1.12, latest will go fall([report issue](https://github.com/coreybutler/nvm-windows/issues/1240))  
+      b. Follow [Installation](https://github.com/coreybutler/nvm-windows/wiki) step
+   2. [NVM Github](https://github.com/nvm-sh/nvm)
+2. Install the Node.js(Ver. 23.8.0 )
+    >nvm install 23.8.0  
+    <i style = 'color: crimson'>No need to install any Nodejs.exe</i>
+3. Use the specific version of Node.js
+    >nvm use 23.8.0
+4. Look for all version of Nodejs
+    >nvm list
+
+## Install Angular CLI
+
+> npm install -g @angular/cli@19.2.1
+
+Run `ng version`, if see below, means success.  
+![ng version](https://i.imgur.com/PtqEC6V.png "")
+
+## Install the node modules
+
+> npm install
 
 ## Development server
 
